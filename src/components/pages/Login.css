@@ -1,0 +1,32 @@
+form button{
+    @apply p-2 bg-blue-700 rounded-md text-white hover:bg-blue-800 duration-150 transition-all my-5 w-full
+}
+
+form input{
+    @apply w-full py-2 my-4 text-base border-b-2 border-slate-300 outline-none placeholder-slate-500
+}
+
+section#image-side {
+    background-image: url(../../assets/ropa-login.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+section#image-side::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(13px); 
+    z-index: -1;
+}
+
+
+section#image-side{
+    background-image: url(../../assets/ropa-login.jpg);
+    background-size: cover;
+    backdrop-filter: blur(13px);
+}
