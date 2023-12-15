@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Login.css'
 
-function Login(){
+function Register(){
     return (
         <section className="flex flex-row h-[100%]">
             <section id="image-side" className="w-[60%] flex flex-col items-center justify-center">
@@ -10,20 +10,20 @@ function Login(){
             </section>
 
             <form id="form-login" className="w-[40%] h-full flex flex-col items-center justify-center p-10">
-                <input type="text" placeholder="Correo electrónico"/>
+                <input type="text" placeholder="Nombres" className="" />
+                <input type="text" placeholder="Apellidos" className="" />
+                <input type="email" placeholder="Correo electrónico" className="" />
                 <input type="password" placeholder="Contraseña" />
 
 
                 <button>
-                    Iniciar sesión
+                    Registrarse
                 </button>
-
-                <a href="">¿Aún no tienes una cuenta? <Link to={'/signup'} className='font-bold text-blue-700'>Registrate</Link></a>
-                <a href="" className="text-center mt-5">¿Has olvidado tu contraseña?</a>
+                <a href="" className="text-center">¿Ya tienes una cuenta? <Link className='font-bold text-blue-700' to={'/login'}>Inicia sesión</Link></a>
             </form>
 
         </section>
     );
 }
 
-export default Login;
+export default Register;
